@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> basic cruds system</title>
+    <link rel="stylesheet" href="frame-work.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="system-container">
+      <!-- start info -->
+      <section class="system-info text-center">
+        <h2 class="system-title uppercase">cruds</h2>
+        <p class="system-description capitalize">product management system</p>
+      </section>
+      <!-- end info -->
+
+      <!-- start inputs -->
+      <section class="system-inputs">
+        <input placeholder="title" type="text" class="product-title" />
+        <div class="product-price-container">
+            
+            <input placeholder="price" type="number" class="product-price" />
+            <input placeholder="taxes" type="number" class="product-taxes" />
+            <input type="number" placeholder="ads" class="ads">
+            <input
+            placeholder="discount"
+            type="number"
+            class="product-discount"
+          />
+          <p class="product-total-price"></p>
+        </div>
+        <input placeholder="count" type="number" class="product-count" />
+        <input placeholder="category" type="text" class="product-category" />
+        <button class="product-submit btn capitalize">create</button>
+      </section>
+      <!-- end inputs -->
+      <!-- start outputs -->
+      <section class="system-outputs">
+        <div class="search-container">
+          <input
+            placeholder="search"
+            type="text"
+            class="product-search-input"
+            onkeyup="searchProducts(this.value)"
+          />
+
+          <div class="btn-search-container flex-around">
+            <button class="search-btn search-btn-title btn capitalize" onclick="getSearch(this.id)" id="search-btn-title">
+              search by tittle
+            </button>
+            <button class="search-btn search-btn-category btn capitalize" onclick="getSearch(this.id)" id="search-btn-category">
+              search by category
+            </button>
+          </div>
+        </div>
+        
+        <div class="switcher-container flex-around">
+          <button class="btn table-icon capitalize">
+            view table
+          </button>
+          <button class="btn  card-icon capitalize">
+            view cards
+          </button>
+        </div>
+        <button class="btn btn-delete-all">
+          delete all
+        </button>
+
+        <div class="products-container">
+
+       
+        
+          <div class="cards-container"></div>
+
+          <div  id="table" class="table-container">
+
+            <table>
+              <thead>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>totalPrice</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </thead>
+
+                <tbody id="tbody">
+                 
+                        
+                      </tbody>
+                    </table> 
+                  </div>
+                    
+                      </div>
+
+
+      </section> 
+      <!-- end outputs -->
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
